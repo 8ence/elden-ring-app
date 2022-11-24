@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Elden";
+  src: local("MantiniaRegular") url("../fonts/MantiniaRegular.ttf") format("truetype");
+}
 .search-container {
   display: flex;
   flex-direction: column;
@@ -5,15 +9,40 @@
   align-items: center;
   gap: 10px;
   height: 20vh;
+  font-family: "Elden";
+}
+.search-container #combo-box-demo {
+  font-family: "Elden";
+}
+.search-container .MuiAutocomplete-endAdornment {
+  display: flex;
+  gap: 10px;
+}
+.search-container .MuiFormLabel-root {
+  font-family: "Elden";
+  color: black !important;
+}
+.search-container .MuiFormLabel-root {
+  font-family: "Elden";
+}
+.search-container .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border: 1px solid black;
+}
+.search-container .MuiAutocomplete-popper {
+  font-family: "Elden";
 }
 .search-container .search-input {
   min-width: 30%;
 }
 .search-container button {
-  background-color: #071635;
+  background-color: #CECBAA;
+  color: #071635;
+  font-family: "Elden";
+  font-weight: 900;
 }
 .search-container button:hover {
-  background-color: #A4B2BF;
+  background-color: #CECBAA;
+  color: #071635;
 }
 
 .npc-container {
@@ -22,24 +51,37 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 10px;
+  padding: 5%;
+  background-color: #1C3031;
 }
 .npc-container .npc-card {
   width: 400px;
-  height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 25px;
+  border-radius: 15px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: #CECBAA;
 }
 .npc-container .npc-card img {
   width: 50%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .npc-container .npc-card h2 {
   margin: 0;
+  font-family: "Elden";
+  margin-bottom: 5px;
 }
 .npc-container .npc-card h3 {
   margin: 0;
+  font-family: "Elden";
+  font-weight: 100;
+}
+.npc-container .npc-card p {
+  font-family: "Elden";
+  font-weight: 500;
 }/*# sourceMappingURL=Npcs.css.map */

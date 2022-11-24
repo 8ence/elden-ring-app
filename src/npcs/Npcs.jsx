@@ -3,6 +3,7 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Button from "@mui/material/Button";
 import "./Npcs.css";
+import "../fonts/MantiniaRegular.ttf";
 
 export const Npcs = () => {
   const [npcs, setNpcs] = useState();
@@ -20,7 +21,7 @@ export const Npcs = () => {
 
   //Find Npc from Name
   useEffect(() => {
-    if (npcName !== undefined) {
+    if (npcName !== "") {
       fetch(`https://eldenring.fanapis.com/api/npcs?name=${npcName}`)
         .then((response) => response.json())
         .then((npcData) => setNpcModal(npcData.data));
@@ -49,7 +50,9 @@ export const Npcs = () => {
           onInputChange={(event, newInputValue) => {
             setNpcNameUpdate(newInputValue);
           }}
-          renderInput={(params) => <TextField {...params} label="Npcs" />}
+          renderInput={(params) => (
+            <TextField {...params} label="Click to search NPC's" />
+          )}
         />
         <Button variant="contained" onClick={searchNpc}>
           Search
@@ -59,7 +62,9 @@ export const Npcs = () => {
         {npcModal &&
           npcModal.map((modalNpc, index) => (
             <div className="npc-modal" key={index}>
+              <img src={modalNpc.image} alt="" />
               {modalNpc.name}
+              {modalNpc.quote}
             </div>
           ))}
       </div>
@@ -70,7 +75,6 @@ export const Npcs = () => {
               <img src={npc.image} alt="" />
               <h2>{npc.name}</h2>
               <h3>{npc.location}</h3>
-              <p>{npc.quote}</p>
             </div>
           ))}
       </div>

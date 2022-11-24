@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Elden";
+    src: local('MantiniaRegular')
+    url('../fonts/MantiniaRegular.ttf') format("truetype")
+  }
+
 .search-container {
     display: flex;
     flex-direction: column;
@@ -7,19 +13,56 @@
 
     height: 20vh;
 
+    font-family: "Elden";
+
+    #combo-box-demo {
+        font-family: "Elden";
+    
+    }
+
+    //Add gap between clear and open button
+    .MuiAutocomplete-endAdornment {
+        display: flex;
+        gap: 10px;
+    }
+
+    .MuiFormLabel-root {
+        font-family: "Elden";
+        color: black!important;
+    }
+
+    .MuiFormLabel-root {
+        font-family: "Elden";
+    }
+
+    //MUI border color class
+    .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border: 1px solid black
+
+    }
+
+    .MuiAutocomplete-popper {
+        font-family: "Elden";
+    }
+
     .search-input {
         min-width: 30%;
     }
 
     button {
-        background-color: #071635;
+        background-color: #CECBAA;
+        color: #071635;
+        font-family: "Elden";
+        font-weight: 900;
 
         &:hover {
-            background-color: #A4B2BF;
+            background-color: #CECBAA;
+            color: #071635;
         }
         
     }
 }
+
 
 .npc-container {
     display: flex;
@@ -28,32 +71,50 @@
     flex-wrap: wrap;
     gap: 30px;
 
-    padding: 10px;
+    padding: 5%;
+
+    background-color: #1C3031;
 
     .npc-card {
         width: 400px;
-        height: 400px;
 
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
 
         padding: 25px;
 
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        border-radius: 15px;
 
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        background-color: #CECBAA;
         img {
             width: 50%;
+
+            border-radius: 15px;
+
+            margin-bottom: 20px;
+
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
         }
 
         h2 {
             margin: 0;
+            font-family: "Elden";
+            margin-bottom: 5px;
         }
 
         h3 {
             margin: 0;
+            font-family: "Elden";
+            font-weight: 100;
+        }
+
+        p {
+            font-family: "Elden";
+            font-weight: 500;
         }
     }
 }
