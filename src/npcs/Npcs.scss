@@ -1,3 +1,26 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    height: 20vh;
+
+    .search-input {
+        min-width: 30%;
+    }
+
+    button {
+        background-color: #071635;
+
+        &:hover {
+            background-color: #A4B2BF;
+        }
+        
+    }
+}
+
 .npc-container {
     display: flex;
     justify-content: center;
