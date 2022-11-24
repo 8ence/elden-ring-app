@@ -1,0 +1,27 @@
+.npc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 10px;
+}
+.npc-container .npc-card {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.npc-container .npc-card img {
+  width: 50%;
+}
+.npc-container .npc-card h2 {
+  margin: 0;
+}
+.npc-container .npc-card h3 {
+  margin: 0;
+}/*# sourceMappingURL=Npcs.css.map */
