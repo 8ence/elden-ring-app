@@ -1,8 +1,7 @@
 @font-face {
-    font-family: "Elden";
-    src: local('MantiniaRegular')
-    url('../fonts/MantiniaRegular.ttf') format("truetype")
-  }
+    font-family: 'Elden';
+    src: local('MantiniaRegular') url('../fonts/MantiniaRegular.ttf') format('truetype');
+}
 
 .search-container {
     display: flex;
@@ -11,13 +10,21 @@
     align-items: center;
     gap: 10px;
 
-    height: 20vh;
+    height: 15vh;
 
-    font-family: "Elden";
+    font-family: 'Elden';
+
+    position: sticky;
+    top: 0;
+
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: white;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 
     #combo-box-demo {
-        font-family: "Elden";
-    
+        font-family: 'Elden';
     }
 
     //Add gap between clear and open button
@@ -27,22 +34,21 @@
     }
 
     .MuiFormLabel-root {
-        font-family: "Elden";
-        color: black!important;
+        font-family: 'Elden';
+        color: black !important;
     }
 
     .MuiFormLabel-root {
-        font-family: "Elden";
+        font-family: 'Elden';
     }
 
     //MUI border color class
     .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-        border: 1px solid black
-
+        border: 1px solid black;
     }
 
     .MuiAutocomplete-popper {
-        font-family: "Elden";
+        font-family: 'Elden';
     }
 
     .search-input {
@@ -50,19 +56,84 @@
     }
 
     button {
-        background-color: #CECBAA;
         color: #071635;
-        font-family: "Elden";
+        font-family: 'Elden';
         font-weight: 900;
 
+        background-color: #cecbaa;
+
         &:hover {
-            background-color: #CECBAA;
             color: #071635;
+
+            background-color: #cecbaa;
         }
-        
     }
 }
 
+.npc-modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #071635be;
+
+    .npc-modal {
+        width: 300px;
+
+        padding: 5%;
+
+        font-family: 'Elden';
+        color: white;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #071635;
+
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        border-radius: 50px;
+
+        position: relative;
+
+        img {
+            width: 200px;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        .npc-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 0;
+            right: 0%;
+
+            color: white;
+            font-family: 'Elden';
+
+            background-color: #cecbaa;
+
+            border-top-right-radius: 50px;
+        }
+    }
+}
 
 .npc-container {
     display: flex;
@@ -73,7 +144,7 @@
 
     padding: 5%;
 
-    background-color: #1C3031;
+    background-color: #1c3031;
 
     .npc-card {
         width: 400px;
@@ -88,7 +159,7 @@
         border-radius: 15px;
 
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        background-color: #CECBAA;
+        background-color: #cecbaa;
         img {
             width: 50%;
 
@@ -97,23 +168,22 @@
             margin-bottom: 20px;
 
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
         }
 
         h2 {
             margin: 0;
-            font-family: "Elden";
+            font-family: 'Elden';
             margin-bottom: 5px;
         }
 
         h3 {
             margin: 0;
-            font-family: "Elden";
+            font-family: 'Elden';
             font-weight: 100;
         }
 
         p {
-            font-family: "Elden";
+            font-family: 'Elden';
             font-weight: 500;
         }
     }

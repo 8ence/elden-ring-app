@@ -8,8 +8,15 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  height: 20vh;
+  height: 15vh;
   font-family: "Elden";
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .search-container #combo-box-demo {
   font-family: "Elden";
@@ -35,14 +42,61 @@
   min-width: 30%;
 }
 .search-container button {
-  background-color: #CECBAA;
   color: #071635;
   font-family: "Elden";
   font-weight: 900;
+  background-color: #cecbaa;
 }
 .search-container button:hover {
-  background-color: #CECBAA;
   color: #071635;
+  background-color: #cecbaa;
+}
+
+.npc-modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(7, 22, 53, 0.7450980392);
+}
+.npc-modal-container .npc-modal {
+  width: 300px;
+  padding: 5%;
+  font-family: "Elden";
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #071635;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 50px;
+  position: relative;
+}
+.npc-modal-container .npc-modal img {
+  width: 200px;
+}
+.npc-modal-container .npc-modal h2 {
+  font-size: 40px;
+}
+.npc-modal-container .npc-modal .npc-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.npc-modal-container .npc-modal .close-button {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  color: white;
+  font-family: "Elden";
+  background-color: #cecbaa;
+  border-top-right-radius: 50px;
 }
 
 .npc-container {
@@ -52,7 +106,7 @@
   flex-wrap: wrap;
   gap: 30px;
   padding: 5%;
-  background-color: #1C3031;
+  background-color: #1c3031;
 }
 .npc-container .npc-card {
   width: 400px;
@@ -63,7 +117,7 @@
   padding: 25px;
   border-radius: 15px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  background-color: #CECBAA;
+  background-color: #cecbaa;
 }
 .npc-container .npc-card img {
   width: 50%;
