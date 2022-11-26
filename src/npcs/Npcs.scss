@@ -1,18 +1,17 @@
 @font-face {
-    font-family: 'Elden';
+    font-family: 'Quattrocento Sans', sans-serif;
     src: local('MantiniaRegular') url('../fonts/MantiniaRegular.ttf') format('truetype');
 }
 
 .search-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
 
     height: 15vh;
 
-    font-family: 'Elden';
+    font-family: 'Quattrocento Sans', sans-serif;
 
     position: sticky;
     top: 0;
@@ -23,8 +22,15 @@
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
     #combo-box-demo {
-        font-family: 'Elden';
+        font-family: 'Quattrocento Sans', sans-serif;
     }
 
     //Add gap between clear and open button
@@ -34,12 +40,12 @@
     }
 
     .MuiFormLabel-root {
-        font-family: 'Elden';
+        font-family: 'Quattrocento Sans', sans-serif;
         color: black !important;
     }
 
     .MuiFormLabel-root {
-        font-family: 'Elden';
+        font-family: 'Quattrocento Sans', sans-serif;
     }
 
     //MUI border color class
@@ -48,7 +54,7 @@
     }
 
     .MuiAutocomplete-popper {
-        font-family: 'Elden';
+        font-family: 'Quattrocento Sans', sans-serif;
     }
 
     .search-input {
@@ -56,16 +62,20 @@
     }
 
     button {
-        color: #071635;
-        font-family: 'Elden';
+        color: white;
+        font-family: 'Quattrocento Sans', sans-serif;
         font-weight: 900;
 
-        background-color: #cecbaa;
+        background-color: #bf9c52;
+
+        border: 2px solid #bf9c52;
 
         &:hover {
-            color: #071635;
+            color: #bf9c52;
 
-            background-color: #cecbaa;
+            background-color: white;
+
+            border: 2px solid #bf9c52;
         }
     }
 }
@@ -90,7 +100,7 @@
 
         padding: 5%;
 
-        font-family: 'Elden';
+        font-family: 'Quattrocento Sans', sans-serif;
         color: white;
 
         display: flex;
@@ -126,9 +136,10 @@
             right: 0%;
 
             color: white;
-            font-family: 'Elden';
+            font-family: 'Quattrocento Sans', sans-serif;
+            font-weight: 900;
 
-            background-color: #cecbaa;
+            background-color: #bf9c52;
 
             border-top-right-radius: 50px;
         }
@@ -147,19 +158,21 @@
     background-color: #1c3031;
 
     .npc-card {
-        width: 400px;
+        width: 300px;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
+        color: white;
+
         padding: 25px;
 
         border-radius: 15px;
 
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        background-color: #cecbaa;
+        background-color: #bf9c52;
         img {
             width: 50%;
 
@@ -172,18 +185,20 @@
 
         h2 {
             margin: 0;
-            font-family: 'Elden';
+            font-family: 'Quattrocento Sans', sans-serif;
             margin-bottom: 5px;
+            font-weight: 900;
         }
 
         h3 {
             margin: 0;
-            font-family: 'Elden';
+            font-family: 'Quattrocento Sans', sans-serif;
             font-weight: 100;
+            font-size: 14px;
         }
 
         p {
-            font-family: 'Elden';
+            font-family: 'Quattrocento Sans', sans-serif;
             font-weight: 500;
         }
     }

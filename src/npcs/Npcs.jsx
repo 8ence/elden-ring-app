@@ -41,23 +41,25 @@ export const Npcs = () => {
 
     return (
         <div>
-            <form className="search-container">
-                <Autocomplete
-                    id="combo-box-demo"
-                    options={autoComplete}
-                    className="search-input"
-                    inputValue={npcName}
-                    onInputChange={(event, newInputValue) => {
-                        setNpcNameUpdate(newInputValue)
-                    }}
-                    renderInput={(params) => (
-                        <TextField {...params} label="Click to search NPC's" />
-                    )}
-                />
-                <Button variant="contained" onClick={searchNpc}>
-                    Search
-                </Button>
-            </form>
+            <div>
+                <div className="search-container">
+                    <Autocomplete
+                        id="combo-box-demo"
+                        options={autoComplete}
+                        className="search-input"
+                        inputValue={npcName}
+                        onInputChange={(event, newInputValue) => {
+                            setNpcNameUpdate(newInputValue)
+                        }}
+                        renderInput={(params) => (
+                            <TextField {...params} label="Click to search NPC's" />
+                        )}
+                    />
+                    <Button variant="contained" onClick={searchNpc}>
+                        Search
+                    </Button>
+                </div>
+            </div>
             <div>
                 {npcModal &&
                     npcModal.map((modalNpc, index) => (
@@ -82,14 +84,19 @@ export const Npcs = () => {
                     ))}
             </div>
             <div className="npc-container">
-                {npcs &&
+                {npcs !== undefined ? (
                     npcs.map((npc, index) => (
                         <div className="npc-card" key={index}>
                             <img src={npc.image} alt="" />
                             <h2>{npc.name}</h2>
                             <h3>{npc.location}</h3>
                         </div>
-                    ))}
+                    ))
+                ) : (
+                    <div>
+                        <p>BETÖLTÉS</p>
+                    </div>
+                )}
             </div>
         </div>
     )
